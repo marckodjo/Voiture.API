@@ -23,7 +23,7 @@ namespace Voiture.API.Controllers
         }
 
         [HttpGet("voitures/{Id}")]
-        public IActionResult GetVoiture(int Id)
+        public ActionResult<Models.Voiture> GetVoiture(int Id)
         {
             Models.Voiture voiture = voitures.FirstOrDefault(x => x.Id == Id);
             //if (voiture == null)
